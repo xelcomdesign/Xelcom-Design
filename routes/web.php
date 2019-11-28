@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Design', function(){
+    return "Carte des Visite Profetionnelle";
+});
+Route::get("/Creations","CreationsController@index"); 
+Route::get("/creations/{id}","CreationsController@show");
+
+
+Route::get("/Design/{id}", function($id){
+    return "je suis am cafe $id";
+});
+Route::get("/","HomeController@index");
+Route::get("/products/{id})", "HomeController@show");
