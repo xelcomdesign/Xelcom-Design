@@ -2537,3 +2537,10 @@ text-align: left;
 background-color:
     #fff;
 }
+.card-img-top {
+
+  width: 1%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+
+}

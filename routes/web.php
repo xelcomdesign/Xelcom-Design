@@ -14,16 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/Design', function(){
-    return "Carte des Visite Profetionnelle";
-});
-Route::get("/Creations","CreationsController@index"); 
+Route::get("/Creations","CreationsController@index");
 Route::get("/creations/{id}","CreationsController@show");
 
 
-Route::get("/Design/{id}", function($id){
-    return "je suis am cafe $id";
-});
 Route::get("/","HomeController@index");
 Route::get("/products/{id})", "HomeController@show");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get("/products/{id}", "HomeController@index");
+Route::get("/categories",'HomeController@index');
+Route::resource('product', 'ProductsController');
+Route::get("/product/edit/{id}", "ProductsController@edit")->name('editer_produit');
+Route::patch("/product/edit/{id}", "ProductsController@update")->name('update_produit');
