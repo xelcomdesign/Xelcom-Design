@@ -26,7 +26,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get("/products/{id}", "HomeController@index");
-Route::get("/categories",'HomeController@index');
+//Route::get("/categories",'HomeController@index');
+Route::get("/categories",'CategoriesController@index');
+
 Route::resource('product', 'ProductsController');
 Route::get("/product/edit/{id}", "ProductsController@edit")->name('editer_produit');
 Route::patch("/product/edit/{id}", "ProductsController@update")->name('update_produit');
+//!---xelcom validation contact--->
+Route::get('contact', 'ContactController@create');
+Route::post('contact', 'ContactController@store');

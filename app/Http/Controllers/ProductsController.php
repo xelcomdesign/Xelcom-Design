@@ -42,9 +42,9 @@ class ProductsController extends Controller
      */
         public function store(Request $request)
         {
-           $produit = new Product();
+           $produit = new \App\Product();
            $produit->name = $request->input('name');
-           $produit->price = $request->input('price');
+           $produit->Prix = $request->input('prix');
            $produit->description = $request->input('description');
            $produit->category_id = $request->input('category_id');
 
