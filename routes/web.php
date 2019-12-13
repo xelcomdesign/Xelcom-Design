@@ -35,3 +35,7 @@ Route::patch("/product/edit/{id}", "ProductsController@update")->name('update_pr
 //!---xelcom validation contact--->
 Route::get('contact', 'ContactController@create');
 Route::post('contact', 'ContactController@store');
+Route::get('/prestation/afficher','PrestationController@afficher')->name('prestation');
+Route::get('/realisation/affiche','RealisationController@affiche')->name('realisation');
+Route::get('products/logos','LogosController@index')->name('logos');
+

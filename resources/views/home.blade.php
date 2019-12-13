@@ -35,7 +35,7 @@
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg  navigation">
 					<a class="navbar-brand" href="index.html">
-						<img src="images/nl.png" alt="">
+						<img src="images/nl.png" alt="Card image cap">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -46,41 +46,71 @@
 								<a class="nav-link" href="index.html">Accueil</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="dashboard.html">Prestations</a>
+								<a class="nav-link" href={{route('prestation')}}>Prestations</a>
 							</li>
+							<div>
 							<li class="nav-item dropdown dropdown-slide">
-								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<a class="nav-link dropdown-toggle" href=""data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Realisations <span><i class="fa fa-angle-down"></i></span>
 								</a>
-								<!-- Dropdown list -->
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="category.html">Logos</a>
-									<a class="dropdown-item" href="single.html">flyers</a>
-									<a class="dropdown-item" href="store-single.html">Posters</a>
-									<a class="dropdown-item" href="dashboard.html">Cartes de visite</a>
-									<a class="dropdown-item" href="user-profile.html">Depliants</a>
-									<a class="dropdown-item" href="submit-coupon.html">CV</a>
-									<a class="dropdown-item" href="blog.html">Brochures</a>
-								
+								<a class="dropdown-item" href="{{route('logos')}}">Logos</a>
+									<a class="dropdown-item" href="#">Flyers</a>
+									<a class="dropdown-item" href="#">Cartes de Visite</a>
+									<a class="dropdown-item" href="#">Brochures</a>
+									<a class="dropdown-item" href="#">Depliants</a>
+									<a class="dropdown-item" href="#">Affiches</a>
 								</div>
-							</li>
+								</div>
+								<!-- Dropdown list -->
+								
 							<li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Inscription <span><i class="fa fa-angle-down"></i></span>
+								Devis<span><i class="fa fa-angle-down"></i></span>
 								</a>
-								<!-- Dropdown list -->
+								<!-- Dropdown list
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#">Action</a>
 									<a class="dropdown-item" href="#">Another action</a>
 									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
+								</div> -->
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
-							<li class="nav-item">
+							<!--<li class="nav-item">
 								<a class="nav-link login-button" href="index.html">Login</a>
 							</li>
-							
+							< !--- inser--->
+
+@guest
+                            <li class="nav-item">
+                                <a class="nav-link login-button" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link login-button" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+						<!--- inser--->	
 						</ul>
 					</div>
 				</nav>
