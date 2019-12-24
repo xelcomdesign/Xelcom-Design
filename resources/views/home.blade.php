@@ -25,17 +25,20 @@
   <![endif]-->
 
 </head>
-
 <body class="body-wrapper">
-
-
 <section>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+			
 				<nav class="navbar navbar-expand-lg  navigation">
+<<<<<<< HEAD
 					<a class="navbar-brand" href="home">
 						<img src="images/nl.png" alt="Card image cap">
+=======
+					<a class="navbar-brand" href="">
+						<img src="images/nl.png" alt="home">
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -52,6 +55,18 @@
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Realisations <span><i class="fa fa-angle-down"></i></span>
 								</a>
+<<<<<<< HEAD
+=======
+								<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="{{route('logos')}}">Logos</a>
+									<a class="dropdown-item" href="{{route('flyer')}}">Flyers</a>
+									<a class="dropdown-item" href="{{route('carte')}}">Cartes de Visite</a>
+									<a class="dropdown-item" href="#">Brochures</a>
+									<a class="dropdown-item" href="#">Depliants</a>
+									<a class="dropdown-item" href="#">Affiches</a>
+								</div>
+								</div>
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 								<!-- Dropdown list -->
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="realisation/logos">Logos</a>
@@ -62,6 +77,7 @@
 									<a class="dropdown-item" href="submit-coupon.html">CV</a>
 									<a class="dropdown-item" href="blog.html">Brochures</a>
 								
+<<<<<<< HEAD
 								</div>
 							</li>
 							<div><li class="nav-item active">
@@ -82,6 +98,13 @@
 									<a class="dropdown-item" href="#">Another action</a>
 									<a class="dropdown-item" href="#">Something else here</a>
 								</div>
+=======
+								<li class="nav-item">
+								<a class="nav-link" href="/devis">Devis</a>
+             					 </li>
+             					 <li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto">
@@ -114,9 +137,16 @@
                                 </div>
                             </li>
                         @endguest
+<<<<<<< HEAD
                     </ul>
+=======
+						<!--- inser--->	
+						</ul>
+						
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 					</div>
 				</nav>
+				
 			</div>
 		</div>
 	</div>
@@ -136,22 +166,26 @@
 				<!-- Header Contetnt -->
 				<div class="content-block">
 					<!--=====---Pour un défilement de bas en haut:text CONCEPTION ET TIRAGE===--->
-					<h1><marquee direction="up" scrollamount="2" height="100" width="1200" >CONCEPTION ET TIRAGE</marquee></h1>
+					<h1><marquee direction="up" scrollamount="2" height="100" width="1200"><p>CONCEPTION ET TIRAGE</p></marquee></h1>
 					
 					<p>Just your Trust and we Assure the Rest<br> Vos supports publicitaires et commerciaux,<br>
+<<<<<<< HEAD
 						 Brochures, papier entête et enveloppe pour vos devis,<br>à
+=======
+						 carte de visite, papier entête et enveloppe pour vos devis,<br>
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 						  posters et affiches pour vos vitrines ou expos, flyers, Carte de visite, tracts et ... </p>
 					<div class="short-popular-category-list text-center">
 						<h2></h2>
 						<ul class="list-inline">
 							<li class="list-inline-item">
-								<a href=""><i class="fa fa-address-card" aria-hidden="true"></i> Cartes de visites </a></li>	
+								<a href="{{route('logos')}}"><i class="fa fa-address-card" aria-hidden="true"></i>Logo</a></li>	
 							<li class="list-inline-item">
 								<a href=""><i class="fa fa-television" aria-hidden="true"></i>
 									Affiches</a>
 							</li>
 							<li class="list-inline-item">
-								<a href=""><i class="fa fa-picture-o" aria-hidden="true"></i>
+								<a href="{{route('flyer')}}"><i class="fa fa-picture-o" aria-hidden="true"></i>
 									flyers</a>
 							</li>
 							<li class="list-inline-item">
@@ -176,6 +210,8 @@
 									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Rechercher dans ">
 									<!-- Search Button -->
 									<button class="btn btn-main">RECHERCHE</button>
+									
+
 								</div>
 							</div>
 						</div>
@@ -216,7 +252,7 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="">
+			<a href="{{route('flyer')}}">
 				<img class="card-img-top img-fluid" src="images/products/2020.jpg" alt="Card image cap">
 			</a>
 		</div>
@@ -253,7 +289,7 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="">
+			<a href="{{route('carte')}}">
 				<img class="card-img-top img-fluid" src="images/products/cart p.jpg" alt="Card image cap">
 			</a>
 		</div>
@@ -290,8 +326,8 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="">
-				<img class="card-img-top img-fluid" src="images/products/cocotex.png" alt="Card image cap">
+			<a href="{{route('logos')}}">
+				<img class="card-img-top img-fluid" src="images/products/nl.png" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">

@@ -12,5 +12,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        User::create(
+           [ 'name'=>'GreatAdmin',
+            'email'=>'xelcomdesign@gmail.com',
+            'password'=>bcrypt('admin'),
+            'role'=>'admin',
+            'valid'=>true,
+            'confirmed'=>true,
+            'remember_token'=>str_random(10)
+        ]);
     }
 }

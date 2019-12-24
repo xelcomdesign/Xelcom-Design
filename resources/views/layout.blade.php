@@ -25,21 +25,20 @@
   <![endif]-->
 
 </head>
-
 <body class="body-wrapper">
-
-
 <section>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
       <!----------------------------------  nav---------------------------------->
-
-
-      
 				<nav class="navbar navbar-expand-lg  navigation">
+<<<<<<< HEAD
 					<a class="navbar-brand" href="home">
 						<img src="images/products/nl.png" alt="">
+=======
+				<a class="navbar-brand" href="home">
+						<img src="images/nl.png" alt="">
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -47,6 +46,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav ">
 							<li class="nav-item active">
+<<<<<<< HEAD
 								<a class="nav-link" href="home">Accueil</a>
 							</li>
 							<li class="nav-item">
@@ -54,10 +54,20 @@
 							</li>
 							<li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" href="/realisation/affiche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+=======
+								<a class="nav-link" href="/home">Accueil</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{route('prestation')}}">Prestations</a>
+              </li>
+              <div>
+							<li class="nav-item dropdown dropdown-slide">
+								<a class="nav-link dropdown-toggle" href=""data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 									Realisations <span><i class="fa fa-angle-down"></i></span>
 								</a>
-								<!-- Dropdown list -->
 								<div class="dropdown-menu dropdown-menu-right">
+<<<<<<< HEAD
 									<a class="dropdown-item" href="realisation/logos">Logos</a>
 									<a class="dropdown-item" href="single.html">flyers</a>
 									<a class="dropdown-item" href="store-single.html">Posters</a>
@@ -77,15 +87,33 @@
 							</li>
 							</div>
 							<li class="nav-item dropdown dropdown-slide">
+=======
+								<a class="dropdown-item" href="{{route('logos')}}">Logos</a>
+									<a class="dropdown-item" href="{{route('flyer')}}">Flyers</a>
+									<a class="dropdown-item" href="{{route('carte')}}">Cartes de Visite</a>
+									<a class="dropdown-item" href="{{route('flyer')}}">Brochures</a>
+									<a class="dropdown-item" href="{{route('flyer')}}">Depliants</a>
+									<a class="dropdown-item" href="{{route('flyer')}}">Affiches</a>
+								</div>
+								</div>
+							</li>
+						<!--	<li class="nav-item dropdown dropdown-slide">
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
 								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Inscription <span><i class="fa fa-angle-down"></i></span>
 								</a>
-								<!-- Dropdown list -->
+								
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#">Action</a>
 									<a class="dropdown-item" href="#">Another action</a>
 									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
+								</div>--->
+              </li>
+              <li class="nav-item">
+								<a class="nav-link" href="/demande_devis">Devis</a>
+              </li>
+              <li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
@@ -121,6 +149,7 @@
                         @endguest
 						<!--- inser--->	
 						</ul>
+            
 					</div>
         </nav>
         <!----------------------------------end nav---------------------------------->
@@ -140,6 +169,7 @@
           <img src="images/lg.JPG" alt="">
           <!-- description -->
           <p class="alt-color">
+          
 
 Je suis à votre disposition pour toute demande d’informations et de conseils sur vos projets. Vous pouvez me contacter via le formulaire en cliquant sur : demande de devis ou par téléphone au (+221) 77 736 89 42 ou au (+221) 76 336 56 72.
 .</p>
@@ -236,6 +266,11 @@ Je suis à votre disposition pour toute demande d’informations et de conseils 
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
   <script src="js/scripts.js"></script>
+
+
+
+
+
 </body>
 
 </html>

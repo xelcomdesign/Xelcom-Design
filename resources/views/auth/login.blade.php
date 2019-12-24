@@ -1,13 +1,17 @@
-@extends('layouts.app')
+@extends('layout')
 
-@section('content')
+@section('contenu_page')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
                 <div class="card-body">
+                <div class="profile-thumb">
+							<img src="{{asset('images/user/us.jpg')}}" alt="" class="rounded-circle">
+						<!---	{{asset('images/products/cocotex.png')}}--->
+						</div>
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -62,6 +66,7 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                
                             </div>
                         </div>
                     </form>

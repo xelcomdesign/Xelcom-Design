@@ -13,7 +13,10 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+<<<<<<< HEAD
    //-----------------Ajout de dossiers xelcom----------
+=======
+>>>>>>> 6de966f0ba77e0ca16f2116b41f68eb396543997
    mix.copyDirectory('node_modules/tinymce/plugins', 'public/node_modules/tinymce/plugins');
    mix.copyDirectory('node_modules/tinymce/skins', 'public/node_modules/tinymce/skins');
    mix.copyDirectory('node_modules/tinymce/themes', 'public/node_modules/tinymce/themes');
