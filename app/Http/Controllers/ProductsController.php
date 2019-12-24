@@ -56,30 +56,20 @@ class ProductsController extends Controller
      */
         public function store(Request $request)
         {
-           $produit = new \App\Product();
-           $produit->name = $request->input('name');
-           $produit->Prix = $request->input('prix');
-           $produit->description = $request->input('description');
-           $produit->category_id = $request->input('category_id');
-
-           $produit->save();
-           return redirect('/');
-
-           {
             $data = $request->validate([
-                'name'=>'required|min:5',
-                'price' => 'required|max:7|numeric',
-                'description' => 'max:1000000'
+                'name'=>'required|min:3',
+                'prix' => 'required|max:7000000000|numeric',
+                'description' => 'max:1000000',
             ]);
-            $produit = new Product();
+            $produit = new \App\Product();
             $produit->name = $request->input('name');
-            $produit->price = $request->input('price');
+            $produit->prix = $request->input('prix');
+            $produit->Quantite = 12;
             $produit->description = $request->input('description');
-            $produit->category_id = $request->input('category_id');
+            $produit->category_id = 1;
+            //dd($produit->category_id);
             $produit->save();
-
            
-         }
          
         }
         
@@ -92,7 +82,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = \App\Product::find($id);
+        return view('products.show', compact('product'));
     }
 
     /**

@@ -1192,7 +1192,7 @@ ul.pagination .active a {
 }
 
 .bg-1 {
-  background: url("../images/home/pictur.jpg");
+  background: url("../images/home/concept.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -3078,5 +3078,72 @@ body {
 text-align: left;
 background-color:
     #fff;
+}
+
+.product-item {
+  box-shadow: 0px 1px 3px 0px 
+  rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+  width: 18%;
+}
+.product-item {
+  box-shadow: 0px 1px 3px 0px 
+  rgba(0, 0, 0, 0.1);
+  margin-bottom: 150px;
+  width: 100%;
+  height: 57%;
+}
+.overly::before {
+  content: '';
+  background: 
+  rgba(0, 0, 0, 0.09);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.product-item {
+  box-shadow: 0px 1px 3px 0px 
+  rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  width: 100%;
+  height: 100%;
+}
+.text-white {
+  color: 
+  #090808 !important;
+}
+.bg-dark {
+  background-color: 
+  #00adee !important;
+}
+.form-control {
+  border-radius: 2px;
+  height: 50px;
+  background-color: 
+#fffdfd;
+color:
+  #000;
+  box-shadow: none;
+  font-size: 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Muli", sans-serif;
+  font-weight: 600;
+  color: #0b0a0a;
+}
+.bg-dark {
+  background-color: 
+#1e1d1d30  !important;
 }
 
