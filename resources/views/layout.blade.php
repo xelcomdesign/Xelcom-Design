@@ -33,9 +33,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+      <!----------------------------------  nav---------------------------------->
+
+
+      
 				<nav class="navbar navbar-expand-lg  navigation">
-					<a class="navbar-brand" href="index.html">
-						<img src="images/nl.png" alt="">
+					<a class="navbar-brand" href="home">
+						<img src="images/products/nl.png" alt="">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -43,18 +47,18 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav ">
 							<li class="nav-item active">
-								<a class="nav-link" href="index.html">Accueil</a>
+								<a class="nav-link" href="home">Accueil</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="dashboard.html">Prestations</a>
+								<a class="nav-link" href="prestation/afficher">Prestations</a>
 							</li>
 							<li class="nav-item dropdown dropdown-slide">
-								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<a class="nav-link dropdown-toggle" href="/realisation/affiche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Realisations <span><i class="fa fa-angle-down"></i></span>
 								</a>
 								<!-- Dropdown list -->
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="category.html">Logos</a>
+									<a class="dropdown-item" href="realisation/logos">Logos</a>
 									<a class="dropdown-item" href="single.html">flyers</a>
 									<a class="dropdown-item" href="store-single.html">Posters</a>
 									<a class="dropdown-item" href="dashboard.html">Cartes de visite</a>
@@ -64,6 +68,14 @@
 								
 								</div>
 							</li>
+              <div><li class="nav-item active">
+								<a class="nav-link" href="index.html">Devis</a>
+							</li></div>
+							<div>
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Contact</a>
+							</li>
+							</div>
 							<li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Inscription <span><i class="fa fa-angle-down"></i></span>
@@ -77,13 +89,41 @@
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
-							<li class="nav-item">
-								<a class="nav-link login-button" href="index.html">Login</a>
-							</li>
-							
+<!--- inser--->
+
+@guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+						<!--- inser--->	
 						</ul>
 					</div>
-				</nav>
+        </nav>
+        <!----------------------------------end nav---------------------------------->
 			</div>
 		</div>
 	</div>
@@ -99,7 +139,10 @@
           <!-- footer logo -->
           <img src="images/lg.JPG" alt="">
           <!-- description -->
-          <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="alt-color">
+
+Je suis à votre disposition pour toute demande d’informations et de conseils sur vos projets. Vous pouvez me contacter via le formulaire en cliquant sur : demande de devis ou par téléphone au (+221) 77 736 89 42 ou au (+221) 76 336 56 72.
+.</p>
         </div>
       </div>
       <!-- Link list -->
@@ -143,7 +186,7 @@
   </div>
   <!-- Container End -->
 </footer>
-<!-- Footer Bottom -->
+<!-- ---------------------------Footer Bottom ---------------------------->
 <footer class="footer-bottom">
     <!-- Container Start -->
     <div class="container">

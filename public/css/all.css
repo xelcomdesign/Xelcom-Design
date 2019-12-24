@@ -1192,7 +1192,7 @@ ul.pagination .active a {
 }
 
 .bg-1 {
-  background: url("../images/home/pictur.jpg");
+  background: url("../images/home/garde.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -3078,4 +3078,13 @@ body {
 text-align: left;
 background-color:
     #fff;
+}
+.overly::before {
+  content: '';
+background: rgba(0, 0, 0, 0.31);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

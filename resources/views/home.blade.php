@@ -34,8 +34,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg  navigation">
-					<a class="navbar-brand" href="index.html">
-						<img src="images/nl.png" alt="">
+					<a class="navbar-brand" href="home">
+						<img src="images/nl.png" alt="Card image cap">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -43,10 +43,10 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto main-nav ">
 							<li class="nav-item active">
-								<a class="nav-link" href="index.html">Accueil</a>
+								<a class="nav-link" href="home">Accueil</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="dashboard.html">Prestations</a>
+								<a class="nav-link" href="{{route('prestation')}}">Prestations</a>
 							</li>
 							<li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,7 +54,7 @@
 								</a>
 								<!-- Dropdown list -->
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="category.html">Logos</a>
+									<a class="dropdown-item" href="realisation/logos">Logos</a>
 									<a class="dropdown-item" href="single.html">flyers</a>
 									<a class="dropdown-item" href="store-single.html">Posters</a>
 									<a class="dropdown-item" href="dashboard.html">Cartes de visite</a>
@@ -64,6 +64,14 @@
 								
 								</div>
 							</li>
+							<div><li class="nav-item active">
+								<a class="nav-link" href="index.html">Devis</a>
+							</li></div>
+							<div>
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Contact</a>
+							</li>
+							</div>
 							<li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Inscription <span><i class="fa fa-angle-down"></i></span>
@@ -130,8 +138,8 @@
 					<!--=====---Pour un défilement de bas en haut:text CONCEPTION ET TIRAGE===--->
 					<h1><marquee direction="up" scrollamount="2" height="100" width="1200" >CONCEPTION ET TIRAGE</marquee></h1>
 					
-					<p>Just your Trust and we Assure the Rest<br> Vos supports publicitaires et commerciaux,
-						 carte de visite, papier entête et enveloppe pour vos devis,
+					<p>Just your Trust and we Assure the Rest<br> Vos supports publicitaires et commerciaux,<br>
+						 Brochures, papier entête et enveloppe pour vos devis,<br>à
 						  posters et affiches pour vos vitrines ou expos, flyers, Carte de visite, tracts et ... </p>
 					<div class="short-popular-category-list text-center">
 						<h2></h2>

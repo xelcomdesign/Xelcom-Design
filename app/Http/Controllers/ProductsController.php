@@ -1,5 +1,17 @@
 <?php
 
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
+//creation d'une méthode pour gérer l’enregistrement des fichiers uploadé
+
+//public function uploadImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null){
+  //  $name = !is_null($filename) ? $filename : str_random('25');
+   // $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
+ 
+  //  return $file;}
+ 
+
+//-end---Upload de fichier----->
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -12,9 +24,11 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    //Creation de l’action index. Liste des produits
     {
        $products = \App\Product::orderBy('created_at', 'DESC')->get();
        return view('products.index', compact('products'));
+
     }
     
 
@@ -58,12 +72,13 @@ class ProductsController extends Controller
                 'description' => 'max:1000000'
             ]);
             $produit = new Product();
-
             $produit->name = $request->input('name');
             $produit->price = $request->input('price');
             $produit->description = $request->input('description');
             $produit->category_id = $request->input('category_id');
             $produit->save();
+
+           
          }
          
         }
@@ -88,9 +103,7 @@ class ProductsController extends Controller
      */
         public function edit($id)
         {
-           $produit = \App\Product::find($id);
            //on recupere le produit
-           return view('products.edit', compact('produit'));
             $product = \App\Product::find($id);
             $categories = \App\Category::pluck('name','id');
             return view('products.edit', compact('product','categories'));
@@ -116,6 +129,7 @@ class ProductsController extends Controller
                    'name' => $request->input('name'),
                    'price' => $request->input('price'),
                    'description' => $request->input('description'),
+                   'category_id'=>$request->input('category_id'),
                ]);
            }
            return redirect()->back();

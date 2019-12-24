@@ -13,8 +13,12 @@ class JoinOrderProduct extends Migration
      */
     public function up()
     {
-        schema :: create_function ('order_product')
-        $table->bing
+        Schema::create('order_product', function(Blueprint $table){
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger("order_id");
+            $table->unsignedBigInteger("product_id");
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +28,6 @@ class JoinOrderProduct extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('order_productrn');        
     }
 }

@@ -76,5 +76,20 @@
             @yield('content')
         </main>
     </div>
+<!--Installer un formateur de text xelcom----->
+
+    <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
+<script>
+<textarea class="description" name="description"></textarea>
+   tinymce.init({
+       selector:'textarea.description',
+       width: 900,
+       height: 300
+   });
+   
+
+
+</script>
+
 </body>
 </html>

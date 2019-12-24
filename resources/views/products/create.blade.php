@@ -5,7 +5,8 @@
            <option value="{{$key}}">{{$value}}</option>
        @endforeach
 </div>
-       <div><p><a href="{{route('product.index')}}">{{__('Enregistrement d\'un produit')}}</a></p></div>
+<form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
+       <div><p><a href="{{route('product.index')}}"><h2>{{__('Enregistrement d\'un produit')}}</h2></a></p></div>
        <div class="container">
            <form action="{{route('product.store')}}" method="post">
                @csrf
@@ -25,8 +26,11 @@
        <option value=""></option>
       
    </select>
-</div>
+   
+   <!--ajouter un champ pour charger une image-->
 
+ <div><input type="file" name="product_image" class="form-control"></div>
+</div>
 
    <!--afficher des erreurs -->
 
